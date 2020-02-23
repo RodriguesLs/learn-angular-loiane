@@ -10,12 +10,13 @@ import { CourseService } from '../courses/courses.service'
 export class CreateCourseComponent implements OnInit {
 
   constructor(private courseService: CourseService) { }
-
+  
   ngOnInit() {
+    
   }
 
   addCourse(course: string) {
-    this.courseService.addCourse(course);
+   this.courseService.addCourse(course);
   }
 
 }

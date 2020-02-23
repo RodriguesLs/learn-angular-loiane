@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CoursesComponent } from './courses.component';
+import { CourseService } from './courses.service'
 
 describe('CoursesComponent', () => {
   let component: CoursesComponent;
@@ -8,7 +9,8 @@ describe('CoursesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoursesComponent ]
+      declarations: [ CoursesComponent ],
+      providers: [ CourseService ]
     })
     .compileComponents();
   }));
@@ -19,11 +21,11 @@ describe('CoursesComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  xit('should render courses', () => {
+  it('should render courses', () => {
     const fixture = TestBed.createComponent(CoursesComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;

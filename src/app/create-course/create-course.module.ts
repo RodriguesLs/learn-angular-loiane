@@ -6,7 +6,7 @@ import { CreateCourseComponent } from './create-course.component'
 @NgModule({
 
   declarations: [
-    CreateCourseComponent
+    CreateCourseComponent,
   ],
   imports: [
     CommonModule
@@ -15,10 +15,7 @@ import { CreateCourseComponent } from './create-course.component'
     CreateCourseComponent
   ],
   providers: [
-    
   ]
-
-
 })
 
 export class CreateCourseModule { }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateCourseComponent } from './create-course.component';
+import { CourseService } from '../courses/courses.service';
 
 describe('CreateCourseComponent', () => {
   let component: CreateCourseComponent;
@@ -8,7 +9,9 @@ describe('CreateCourseComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateCourseComponent ]
+      declarations: [ CreateCourseComponent ],
+      providers: [CourseService]
+
     })
     .compileComponents();
   }));
@@ -21,5 +24,12 @@ describe('CreateCourseComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should be render', () => {
+    fixture = TestBed.createComponent(CreateCourseComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('create-course');
   });
 });
