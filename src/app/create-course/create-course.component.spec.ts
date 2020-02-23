@@ -32,4 +32,12 @@ describe('CreateCourseComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('p').textContent).toContain('create-course');
   });
+
+  it('shoud be render courses too', () => {
+    fixture = TestBed.createComponent(CreateCourseComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('li').textContent).toContain('Angular');
+    // expect(compiled.querySelector('li').textContent).toBe('Python');
+  })
 });
