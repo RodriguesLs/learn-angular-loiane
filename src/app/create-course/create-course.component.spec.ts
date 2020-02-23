@@ -37,9 +37,11 @@ describe('CreateCourseComponent', () => {
     fixture = TestBed.createComponent(CreateCourseComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll('li')[0].textContent).toContain('Angular');
-    expect(compiled.querySelectorAll('li')[1].textContent).toContain('Python');
-    expect(compiled.querySelectorAll('li')[2].textContent).toContain('Ruby');
+    // console.log(compiled);
+    const courses = compiled.querySelectorAll('li');
+    expect(courses[0].textContent).toContain('Angular');
+    expect(courses[1].textContent).toContain('Python');
+    expect(courses[2].textContent).toContain('Ruby');
     // expect(compiled.querySelector('li').textContent).toBe('Python');
   })
 });
