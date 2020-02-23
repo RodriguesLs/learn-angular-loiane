@@ -5,17 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseService } from './courses/courses.service';
-import { CreateCourseComponent } from './create-course/create-course.component'
+// import { CreateCourseComponent } from './create-course/create-course.component'
+import { CreateCourseModule } from './create-course/create-course.module'
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CreateCourseComponent
+    // CreateCourseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CreateCourseModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
