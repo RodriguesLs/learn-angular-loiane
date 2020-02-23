@@ -19,11 +19,11 @@ describe('CoursesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  xit('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render courses', () => {
+  xit('should render courses', () => {
     const fixture = TestBed.createComponent(CoursesComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
